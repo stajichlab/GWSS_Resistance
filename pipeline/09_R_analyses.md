@@ -415,7 +415,7 @@ ph <- as.ggplot(pheatmap(heatmap_data, cluster_rows = FALSE,
     annotation_colors = ann_colors))
 ```
 
-![](08_R_analyses_files/figure-gfm/plot_DEG-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/plot_DEG-1.png)<!-- -->
 
 ``` r
 # ph
@@ -471,7 +471,7 @@ J6590_005969.plot <- ggplot(data = norm.countg.Up.goi.3.sum,
 J6590_005969.plot
 ```
 
-![](08_R_analyses_files/figure-gfm/gene_of_interest_plot-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/gene_of_interest_plot-1.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/J6590_005969_11152021.png', plot
@@ -530,7 +530,7 @@ ggplot(data = norm.countg.Up.goi.3.sum, aes(x = Population, y = (mean),
     facet_grid(~GeneID)
 ```
 
-![](08_R_analyses_files/figure-gfm/p450-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/p450-1.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/up_p450s_11152021.png', plot =
@@ -565,7 +565,7 @@ whole.2
 
     ## Warning in MASS::cov.trob(data[, vars]): Probable convergence failure
 
-![](08_R_analyses_files/figure-gfm/ordination_exp-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/ordination_exp-1.png)<!-- -->
 
 #### P450 phylogeny and expression
 
@@ -632,7 +632,7 @@ gheatmap(p450_tre_w_meta_plot, heatmapData.2, offset = 5, colnames_offset_y = -2
     name = "Variance Stabilized Counts")
 ```
 
-![](08_R_analyses_files/figure-gfm/phylo-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/phylo-1.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/p450_full_tree_v2.pdf', plot =
@@ -844,7 +844,7 @@ go_enrich_bp <- enrichGO(gene = res.genes, universe = names(gene_list),
 upsetplot(go_enrich)
 ```
 
-![](08_R_analyses_files/figure-gfm/method_3-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/method_3-1.png)<!-- -->
 
 ``` r
 res.bar <- barplot(go_enrich, drop = TRUE, showCategory = 10,
@@ -871,7 +871,7 @@ res.cnet + scale_color_viridis_c(option = "B")
     ## Scale for 'colour' is already present. Adding another scale for 'colour',
     ## which will replace the existing scale.
 
-![](08_R_analyses_files/figure-gfm/method_3-2.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/method_3-2.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/GO_enrich_res_cnet.pdf', plot =
@@ -906,7 +906,7 @@ go_enrich_sus_cc <- enrichGO(gene = sus.genes, universe = names(gene_list),
 upsetplot(go_enrich_sus)
 ```
 
-![](08_R_analyses_files/figure-gfm/method_3-3.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/method_3-3.png)<!-- -->
 
 ``` r
 sus.bar <- barplot(go_enrich_sus, drop = TRUE, showCategory = 10,
@@ -934,7 +934,7 @@ sus.cnet <- cnetplot(go_enrich_sus.2, foldChange = (-gene_list),
 res.cnet + sus.cnet + plot_annotation(tag_levels = "A")
 ```
 
-![](08_R_analyses_files/figure-gfm/method_3-4.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/method_3-4.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/GO_enrich_res_sus_cnet.pdf',
@@ -945,7 +945,7 @@ res.cnet + sus.cnet + plot_annotation(tag_levels = "A")
 res.dot + sus.dot + plot_annotation(tag_levels = "A")
 ```
 
-![](08_R_analyses_files/figure-gfm/method_3-5.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/method_3-5.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/GO_enrich_res_sus_dot.pdf', plot
@@ -957,7 +957,7 @@ res.dot + sus.dot + plot_annotation(tag_levels = "A")
 res.bar + sus.bar + plot_annotation(tag_levels = "A")
 ```
 
-![](08_R_analyses_files/figure-gfm/method_3-6.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/method_3-6.png)<!-- -->
 
 ``` r
 # ggsave(filename = 'plots/GO_enrich_res_sus_bar.pdf', plot
@@ -1119,7 +1119,7 @@ lbls <- paste("PC", 1:4, ": ", format(pc.percent[1:4], digits=2), "% variance", 
 pairs(pca$eigenvect[,1:4], col=tab$pop, labels=lbls)
 ```
 
-![](08_R_analyses_files/figure-gfm/snp_ord-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/snp_ord-1.png)<!-- -->
 
 ``` r
 whole.snp <- ggplot(tab,aes(x=EV1,y=EV2, color=location, shape=res_stats)) +
@@ -1133,7 +1133,7 @@ whole.snp <- ggplot(tab,aes(x=EV1,y=EV2, color=location, shape=res_stats)) +
 whole.snp  
 ```
 
-![](08_R_analyses_files/figure-gfm/snp_ord-2.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/snp_ord-2.png)<!-- -->
 
 #### Population statistics
 
@@ -1490,7 +1490,7 @@ fst.plot <- ggplot(data = fst.df, aes(x = Label1, y = Label2,
 fst.plot + whole.snp + plot_annotation(tag_levels = "A")
 ```
 
-![](08_R_analyses_files/figure-gfm/plot_snp-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/plot_snp-1.png)<!-- -->
 
 ``` r
 # ggsave(filename =
@@ -1572,7 +1572,7 @@ grid.arrange(p1$plot[[1]])
 struc <- as.ggplot(grid.arrange(p1$plot[[1]]))
 ```
 
-![](08_R_analyses_files/figure-gfm/plot_struc-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/plot_struc-1.png)<!-- -->
 
 ``` r
 #struc
@@ -1822,7 +1822,7 @@ fst <- MakeDiploidFSTMat(G2, locusNames = 1:ncol(G2), popNames = meta$Population
 hist(fst$FST, breaks = 50)
 ```
 
-![](08_R_analyses_files/figure-gfm/outflank-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/outflank-1.png)<!-- -->
 
 ``` r
 summary(fst$FST)
@@ -1844,7 +1844,7 @@ OutFLANKResultsPlotter(OF, withOutliers = T, NoCorr = T, Hmin = 0.1,
     binwidth = 0.005, Zoom = F, RightZoomFraction = 0.05, titletext = NULL)
 ```
 
-![](08_R_analyses_files/figure-gfm/outflank-2.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/outflank-2.png)<!-- -->
 
 ``` r
 P1 <- pOutlierFinderChiSqNoCorr(fst, Fstbar = OF$FSTNoCorrbar,
@@ -1906,7 +1906,7 @@ f <- q %>%
 f
 ```
 
-![](08_R_analyses_files/figure-gfm/loci-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/loci-1.png)<!-- -->
 
 ``` r
 # save ggsave('plots/p450_EDTA.pdf', height = 3, width = 8,
@@ -1928,7 +1928,7 @@ f/(J6590_005969_tree_plot2 + J6590_005969.plot + plot_layout(widths = c(2,
     2)) + plot_layout(guides = "collect")
 ```
 
-![](08_R_analyses_files/figure-gfm/plot_loci-1.png)<!-- -->
+![](09_R_analyses_files/figure-gfm/plot_loci-1.png)<!-- -->
 
 ``` r
 # ggsave('plots/p450_of_interest_treeonly.pdf',
