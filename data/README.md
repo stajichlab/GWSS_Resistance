@@ -1,6 +1,8 @@
 # Description of data files
 Note - some files will need to be unzipped before use 
 
+These files are all used in 09_R_analyses.md
+
 ### Sample file
 samples.tsv
 
