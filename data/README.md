@@ -20,9 +20,6 @@ all_p450s_treemeta.txt
 ### P450 phylogeny
 p450_all_T1_and_any_T2_expressed_trim.aln.contree
 
-### GWSS genome annotation
-Homalodisca_vitripennis_A6A7A9_masurca_v1_ragtag_v1.annotations.txt
-
 ### GWSS GO terms
 HV_gogenes_uniq.txt
 
