@@ -25,8 +25,11 @@ p450_all_T1_and_any_T2_expressed_trim.aln.contree
 ### GWSS GO Terms used for GO Enrichment
 HV_gogenes_uniq.txt
 
-### Files need for gggenomes of loci of interst on scaffold22
+### Files need for gggenomes 
 scaffold22_edta.gff
+
 scaffold22.fa
+
 scaffold22.gff3
+
 coverage.res.tsv
