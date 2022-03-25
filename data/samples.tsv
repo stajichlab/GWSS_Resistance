@@ -1,0 +1,17 @@
+SampleID	Name	Rep	Location	ImidaclopridStatus	FileName
+A1	A	1	Tulare	Susceptible	A1_S29_L001
+A2	A	2	Tulare	Susceptible	A2_S47_L001
+A3	A	3	Tulare	Susceptible	A3_S48_L001
+A5	A	4	Tulare	Susceptible	A5_S49_L001
+B1	B	1	Temecula	Susceptible	B1_S50_L001
+B2	B	2	Temecula	Susceptible	B2_S51_L001
+B3	B	3	Temecula	Susceptible	B3_S52_L001
+B5	B	4	Temecula	Susceptible	B5_S53_L001
+C5	C	1	GeneralBeale	Resistant	C5_S30_L001
+C6	C	2	GeneralBeale	Resistant	C6_S54_L001
+C7	C	3	GeneralBeale	Resistant	C7_S55_L001
+C8	C	4	GeneralBeale	Resistant	C8_S31_L001
+D5	D	1	Tulare	Resistant	D5_S56_L001
+D6	D	2	Tulare	Resistant	D6_S57_L001
+D7	D	3	Tulare	Resistant	D7_S58_L001
+D8	D	4	Tulare	Resistant	D8_S32_L001
