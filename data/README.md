@@ -6,6 +6,9 @@ These files are all used in 09_R_analyses.md
 ### Sample file
 samples.tsv
 
+### Location / Population Information
+location.info.csv
+
 ### STAR counts per gene used for DESeq2 analyses
 STAR_featureCounts.tsv
 

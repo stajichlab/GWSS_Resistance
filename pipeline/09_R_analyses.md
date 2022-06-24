@@ -53,6 +53,7 @@ library(gridExtra)
 library(svglite)
 library(tidyr)
 library(multcomp)
+library(maps)
 
 set.seed(1234)
 
@@ -81,38 +82,39 @@ sessionInfo()
     ## [8] methods   base     
     ## 
     ## other attached packages:
-    ##  [1] multcomp_1.4-18             TH.data_1.1-0              
-    ##  [3] MASS_7.3-55                 survival_3.2-13            
-    ##  [5] mvtnorm_1.1-3               svglite_2.1.0              
-    ##  [7] gridExtra_2.3               pophelper_2.3.1            
-    ##  [9] bigsnpr_1.9.12              bigstatsr_1.5.6            
-    ## [11] viridis_0.6.2               viridisLite_0.4.0          
-    ## [13] gggenomes_0.9.5.9000        snakecase_0.11.0           
-    ## [15] jsonlite_1.7.3              thacklr_0.0.0.9000         
-    ## [17] gggenes_0.4.1               OutFLANK_0.2               
-    ## [19] qvalue_2.26.0               LEA_3.6.0                  
-    ## [21] ggplotify_0.1.0             vcfR_1.12.0                
-    ## [23] poppr_2.9.3                 SNPRelate_1.28.0           
-    ## [25] gdsfmt_1.30.0               pegas_1.1                  
-    ## [27] hierfstat_0.5-10            adegenet_2.1.5             
-    ## [29] ade4_1.7-18                 ape_5.6-1                  
-    ## [31] treeio_1.19.1               ggtree_3.2.1               
-    ## [33] ggupset_0.3.0               pathview_1.34.0            
-    ## [35] enrichplot_1.14.1           AnnotationForge_1.36.0     
-    ## [37] AnnotationDbi_1.56.2        clusterProfiler_4.2.2      
-    ## [39] patchwork_1.1.1             RColorBrewer_1.1-2         
-    ## [41] pheatmap_1.0.12             DESeq2_1.34.0              
-    ## [43] SummarizedExperiment_1.24.0 Biobase_2.54.0             
-    ## [45] MatrixGenerics_1.6.0        matrixStats_0.61.0         
-    ## [47] GenomicRanges_1.46.1        GenomeInfoDb_1.30.1        
-    ## [49] IRanges_2.28.0              S4Vectors_0.32.3           
-    ## [51] BiocGenerics_0.40.0         vroom_1.5.7                
-    ## [53] forcats_0.5.1               stringr_1.4.0              
-    ## [55] dplyr_1.0.8                 purrr_0.3.4                
-    ## [57] readr_2.1.2                 tidyr_1.2.0                
-    ## [59] tibble_3.1.6                ggplot2_3.3.5              
-    ## [61] tidyverse_1.3.1             biobroom_1.26.0            
-    ## [63] broom_0.7.12                knitr_1.37                 
+    ##  [1] maps_3.4.0                  multcomp_1.4-18            
+    ##  [3] TH.data_1.1-0               MASS_7.3-55                
+    ##  [5] survival_3.2-13             mvtnorm_1.1-3              
+    ##  [7] svglite_2.1.0               gridExtra_2.3              
+    ##  [9] pophelper_2.3.1             bigsnpr_1.9.12             
+    ## [11] bigstatsr_1.5.6             viridis_0.6.2              
+    ## [13] viridisLite_0.4.0           gggenomes_0.9.5.9000       
+    ## [15] snakecase_0.11.0            jsonlite_1.7.3             
+    ## [17] thacklr_0.0.0.9000          gggenes_0.4.1              
+    ## [19] OutFLANK_0.2                qvalue_2.26.0              
+    ## [21] LEA_3.6.0                   ggplotify_0.1.0            
+    ## [23] vcfR_1.12.0                 poppr_2.9.3                
+    ## [25] SNPRelate_1.28.0            gdsfmt_1.30.0              
+    ## [27] pegas_1.1                   hierfstat_0.5-10           
+    ## [29] adegenet_2.1.5              ade4_1.7-18                
+    ## [31] ape_5.6-1                   treeio_1.19.1              
+    ## [33] ggtree_3.2.1                ggupset_0.3.0              
+    ## [35] pathview_1.34.0             enrichplot_1.14.1          
+    ## [37] AnnotationForge_1.36.0      AnnotationDbi_1.56.2       
+    ## [39] clusterProfiler_4.2.2       patchwork_1.1.1            
+    ## [41] RColorBrewer_1.1-2          pheatmap_1.0.12            
+    ## [43] DESeq2_1.34.0               SummarizedExperiment_1.24.0
+    ## [45] Biobase_2.54.0              MatrixGenerics_1.6.0       
+    ## [47] matrixStats_0.61.0          GenomicRanges_1.46.1       
+    ## [49] GenomeInfoDb_1.30.1         IRanges_2.28.0             
+    ## [51] S4Vectors_0.32.3            BiocGenerics_0.40.0        
+    ## [53] vroom_1.5.7                 forcats_0.5.1              
+    ## [55] stringr_1.4.0               dplyr_1.0.8                
+    ## [57] purrr_0.3.4                 readr_2.1.2                
+    ## [59] tidyr_1.2.0                 tibble_3.1.6               
+    ## [61] ggplot2_3.3.5               tidyverse_1.3.1            
+    ## [63] biobroom_1.26.0             broom_0.7.12               
+    ## [65] knitr_1.37                 
     ## 
     ## loaded via a namespace (and not attached):
     ##   [1] bit64_4.0.5            DelayedArray_0.20.0    data.table_1.14.2     
@@ -1077,10 +1079,10 @@ pca <- snpgdsPCA(genofile, num.thread=2, autosome.only = FALSE)
     ##     # of principal components: 32
     ## PCA:    the sum of all selected genotypes (0,1,2) = 6366581
     ## CPU capabilities: Double-Precision SSE2
-    ## Thu Mar 24 16:10:47 2022    (internal increment: 61056)
+    ## Thu Jun 23 18:42:50 2022    (internal increment: 61056)
     ## [..................................................]  0%, ETC: ---        [==================================================] 100%, completed, 0s
-    ## Thu Mar 24 16:10:47 2022    Begin (eigenvalues and eigenvectors)
-    ## Thu Mar 24 16:10:47 2022    Done.
+    ## Thu Jun 23 18:42:50 2022    Begin (eigenvalues and eigenvectors)
+    ## Thu Jun 23 18:42:50 2022    Done.
 
 ``` r
 pc.percent <- pca$varprop*100
@@ -1857,7 +1859,7 @@ table(outliers)
     ##  FALSE 
     ## 297686
 
-##(4) Genetic architecture around locus
+## (4) Genetic architecture around locus
 
 ``` r
 # load in files, I subset to one scaffold before hand
@@ -1933,4 +1935,70 @@ f/(J6590_005969_tree_plot2 + J6590_005969.plot + plot_layout(widths = c(2,
 ``` r
 # ggsave('plots/p450_of_interest_treeonly.pdf',
 # device='pdf', height = 6, width = 11, dpi=300)
+```
+
+## (5) Map of populations
+
+``` r
+california <- map_data("state", region = "California")
+
+pop.info <- read.csv("location.info.csv")
+
+pop.info$lat[1] <- pop.info$lat[1] + 0.05 #so close together so will add this small amount to distinguish on map
+
+# pop.info <- pop.info %>% 
+#   mutate(Pop2 = recode(Pop, "A" = "A (Tulare susceptible)", 
+#                             "B" = "B (Temecula susceptible)", 
+#                             "C" = "C (General Beale resistant)",
+#                             "D" = "D (Tulare resistant)"))
+
+#for population labels, need to move A so doesn't overlap
+pop.info$lat2 <- pop.info$lat
+pop.info$lat2[1] <- pop.info$lat2[1] + .4
+
+pop.info$lat3 <- pop.info$lat
+pop.info$lat3[1] <- pop.info$lat3[1] + .15
+
+cali_map <- ggplot() + geom_polygon(data = california, aes(x = long, 
+        y = lat, group = group), fill = "grey", alpha = 0.3) + 
+        geom_point(data = pop.info, aes(x = long, 
+            y = lat, color = Location, shape = Status),size=2, 
+            stroke = FALSE) + #coord_quickmap(xlim = c(-121, -115), ylim = c(32.5, 36)) +  
+        scale_color_manual(values = c( "#0072B2", "#009E73", "#E69F00")) + 
+        theme(text = element_text(size = 12)) + guides(color = guide_legend(title = "Location"), 
+        shape = guide_legend(title = "Resistance"))  + 
+        theme(panel.background = element_blank(), panel.border = element_blank(), 
+            panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+            legend.key = element_rect(fill = NA, color = NA), 
+            axis.text.y = element_blank(), axis.text.x = element_blank(), 
+            axis.title.x = element_blank(), axis.ticks.y = element_blank(), 
+            axis.ticks.x = element_blank(), axis.title.y = element_blank()) + geom_text(data =pop.info, aes(x = long, y = lat2, label=Pop, color=Location), hjust = 0, nudge_x = 0.1)
+
+
+
+close_up <- ggplot() + geom_polygon(data = california, aes(x = long, 
+        y = lat, group = group), fill = "grey", alpha = 0.3) + 
+        geom_point(data = pop.info, aes(x = long, 
+            y = lat, color = Location, shape = Status), size=2, 
+            stroke = FALSE) + coord_quickmap(xlim = c(-119.5, -116.5), ylim = c(32.5, 36.25)) +  
+        scale_color_manual(values = c( "#0072B2", "#009E73", "#E69F00")) + 
+        theme(text = element_text(size = 12)) + guides(color = guide_legend(title = "Location"), 
+        shape = guide_legend(title = "Resistance"))  + 
+        theme(panel.background = element_blank(), panel.border = element_blank(), 
+            panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+            legend.key = element_rect(fill = NA, color = NA), 
+            axis.text.y = element_blank(), axis.text.x = element_blank(), 
+            axis.title.x = element_blank(), axis.ticks.y = element_blank(), 
+            axis.ticks.x = element_blank(), axis.title.y = element_blank())+ geom_text(data =pop.info, aes(x = long, y = lat3, label=Pop, color=Location), hjust = 0, nudge_x = 0.1)
+
+
+
+
+cali_map + close_up + plot_layout(guides = "collect") + plot_annotation(tag_levels = "A")
+```
+
+![](09_R_analyses_files/figure-gfm/map-1.png)<!-- -->
+
+``` r
+#ggsave("plots/map.pdf", device="pdf", height = 4, width = 8, dpi=300)
 ```

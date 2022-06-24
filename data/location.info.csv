@@ -1,0 +1,5 @@
+﻿Pop,Status,Location,AgriMethod,lat,long
+A,Susceptible,Tulare,Organic,35.985913,-118.968921
+B,Susceptible,Temecula,Organic,33.5258405,-117.0392916
+C,Resistant,General Beale,Organic,35.2696228,-118.7613945
+D,Resistant,Tulare,Conventional,35.9641278,-118.9620478
