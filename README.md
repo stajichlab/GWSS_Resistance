@@ -4,7 +4,9 @@
 
 ### To cite this work or code
 
-<i>coming soon</i>
+Cassie Ettinger, & Jason Stajich. (2022). stajichlab/GWSS_Resistance: v.1 (v.1). Zenodo. https://doi.org/10.5281/zenodo.6959134
+
+<i>Manuscript coming soon</i>
 
 ### Abstract
 
