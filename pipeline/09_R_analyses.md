@@ -82,87 +82,88 @@ sessionInfo()
     ## [8] methods   base     
     ## 
     ## other attached packages:
-    ##  [1] maps_3.4.0                  multcomp_1.4-18            
-    ##  [3] TH.data_1.1-0               MASS_7.3-55                
-    ##  [5] survival_3.2-13             mvtnorm_1.1-3              
+    ##  [1] maps_3.4.0                  multcomp_1.4-19            
+    ##  [3] TH.data_1.1-1               MASS_7.3-57                
+    ##  [5] survival_3.3-1              mvtnorm_1.1-3              
     ##  [7] svglite_2.1.0               gridExtra_2.3              
-    ##  [9] pophelper_2.3.1             bigsnpr_1.9.12             
+    ##  [9] pophelper_2.3.1             bigsnpr_1.10.8             
     ## [11] bigstatsr_1.5.6             viridis_0.6.2              
     ## [13] viridisLite_0.4.0           gggenomes_0.9.5.9000       
-    ## [15] snakecase_0.11.0            jsonlite_1.7.3             
+    ## [15] snakecase_0.11.0            jsonlite_1.8.0             
     ## [17] thacklr_0.0.0.9000          gggenes_0.4.1              
     ## [19] OutFLANK_0.2                qvalue_2.26.0              
     ## [21] LEA_3.6.0                   ggplotify_0.1.0            
     ## [23] vcfR_1.12.0                 poppr_2.9.3                
     ## [25] SNPRelate_1.28.0            gdsfmt_1.30.0              
-    ## [27] pegas_1.1                   hierfstat_0.5-10           
-    ## [29] adegenet_2.1.5              ade4_1.7-18                
-    ## [31] ape_5.6-1                   treeio_1.19.1              
+    ## [27] pegas_1.1                   hierfstat_0.5-11           
+    ## [29] adegenet_2.1.7              ade4_1.7-19                
+    ## [31] ape_5.6-2                   treeio_1.19.1              
     ## [33] ggtree_3.2.1                ggupset_0.3.0              
-    ## [35] pathview_1.34.0             enrichplot_1.14.1          
+    ## [35] pathview_1.34.0             enrichplot_1.14.2          
     ## [37] AnnotationForge_1.36.0      AnnotationDbi_1.56.2       
     ## [39] clusterProfiler_4.2.2       patchwork_1.1.1            
-    ## [41] RColorBrewer_1.1-2          pheatmap_1.0.12            
+    ## [41] RColorBrewer_1.1-3          pheatmap_1.0.12            
     ## [43] DESeq2_1.34.0               SummarizedExperiment_1.24.0
     ## [45] Biobase_2.54.0              MatrixGenerics_1.6.0       
-    ## [47] matrixStats_0.61.0          GenomicRanges_1.46.1       
+    ## [47] matrixStats_0.62.0          GenomicRanges_1.46.1       
     ## [49] GenomeInfoDb_1.30.1         IRanges_2.28.0             
-    ## [51] S4Vectors_0.32.3            BiocGenerics_0.40.0        
+    ## [51] S4Vectors_0.32.4            BiocGenerics_0.40.0        
     ## [53] vroom_1.5.7                 forcats_0.5.1              
-    ## [55] stringr_1.4.0               dplyr_1.0.8                
+    ## [55] stringr_1.4.0               dplyr_1.0.9                
     ## [57] purrr_0.3.4                 readr_2.1.2                
-    ## [59] tidyr_1.2.0                 tibble_3.1.6               
-    ## [61] ggplot2_3.3.5               tidyverse_1.3.1            
-    ## [63] biobroom_1.26.0             broom_0.7.12               
-    ## [65] knitr_1.37                 
+    ## [59] tidyr_1.2.0                 tibble_3.1.7               
+    ## [61] ggplot2_3.3.6               tidyverse_1.3.1            
+    ## [63] biobroom_1.26.0             broom_1.0.0                
+    ## [65] knitr_1.39                 
     ## 
     ## loaded via a namespace (and not attached):
     ##   [1] bit64_4.0.5            DelayedArray_0.20.0    data.table_1.14.2     
-    ##   [4] KEGGREST_1.34.0        RCurl_1.98-1.6         doParallel_1.0.17     
-    ##   [7] generics_0.1.2         cowplot_1.1.1          RSQLite_2.2.10        
-    ##  [10] shadowtext_0.1.1       combinat_0.0-8         ggfittext_0.9.1       
-    ##  [13] bit_4.0.4              tzdb_0.2.0             xml2_1.3.3            
+    ##   [4] KEGGREST_1.34.0        RCurl_1.98-1.7         doParallel_1.0.17     
+    ##   [7] generics_0.1.3         cowplot_1.1.1          RSQLite_2.2.14        
+    ##  [10] shadowtext_0.1.2       combinat_0.0-8         ggfittext_0.9.1       
+    ##  [13] bit_4.0.4              tzdb_0.3.0             xml2_1.3.3            
     ##  [16] lubridate_1.8.0        httpuv_1.6.5           assertthat_0.2.1      
-    ##  [19] xfun_0.29              hms_1.1.1              evaluate_0.15         
-    ##  [22] promises_1.2.0.1       fansi_1.0.2            dbplyr_2.1.1          
-    ##  [25] readxl_1.3.1           Rgraphviz_2.38.0       igraph_1.2.11         
-    ##  [28] DBI_1.1.2              geneplotter_1.72.0     ellipsis_0.3.2        
+    ##  [19] xfun_0.31              hms_1.1.1              evaluate_0.15         
+    ##  [22] promises_1.2.0.1       fansi_1.0.3            dbplyr_2.2.1          
+    ##  [25] readxl_1.4.0           Rgraphviz_2.38.0       igraph_1.3.2          
+    ##  [28] DBI_1.1.3              geneplotter_1.72.0     ellipsis_0.3.2        
     ##  [31] backports_1.4.1        permute_0.9-7          annotate_1.72.0       
-    ##  [34] vctrs_0.3.8            cachem_1.0.6           withr_2.5.0           
-    ##  [37] ggforce_0.3.3          vegan_2.5-7            cluster_2.1.2         
-    ##  [40] DOSE_3.20.1            lazyeval_0.2.2         crayon_1.5.0          
+    ##  [34] vctrs_0.4.1            cachem_1.0.6           withr_2.5.0           
+    ##  [37] ggforce_0.3.3          vegan_2.6-2            cluster_2.1.3         
+    ##  [40] DOSE_3.20.1            lazyeval_0.2.2         crayon_1.5.1          
     ##  [43] genefilter_1.76.0      pkgconfig_2.0.3        tweenr_1.0.2          
-    ##  [46] nlme_3.1-155           rlang_1.0.2            lifecycle_1.0.1       
-    ##  [49] sandwich_3.0-1         downloader_0.4         seqinr_4.2-8          
+    ##  [46] nlme_3.1-158           rlang_1.0.4            lifecycle_1.0.1       
+    ##  [49] sandwich_3.0-2         downloader_0.4         seqinr_4.2-16         
     ##  [52] modelr_0.1.8           cellranger_1.1.0       polyclip_1.10-0       
-    ##  [55] graph_1.72.0           Matrix_1.4-0           aplot_0.1.2           
-    ##  [58] zoo_1.8-9              boot_1.3-28            reprex_2.0.1          
-    ##  [61] png_0.1-7              bitops_1.0-7           Biostrings_2.62.0     
-    ##  [64] blob_1.2.2             gridGraphics_0.5-1     scales_1.1.1          
-    ##  [67] lpSolve_5.6.15         memoise_2.0.1          magrittr_2.0.2        
-    ##  [70] plyr_1.8.6             zlibbioc_1.40.0        compiler_4.1.2        
-    ##  [73] scatterpie_0.1.7       KEGGgraph_1.54.0       flock_0.7             
-    ##  [76] cli_3.2.0              XVector_0.34.0         bigsparser_0.6.0      
-    ##  [79] formatR_1.11           mgcv_1.8-38            tidyselect_1.1.1      
-    ##  [82] stringi_1.7.6          yaml_2.3.4             GOSemSim_2.20.0       
-    ##  [85] locfit_1.5-9.4         ggrepel_0.9.1          fastmatch_1.1-3       
-    ##  [88] tools_4.1.2            bigassertr_0.1.5       parallel_4.1.2        
-    ##  [91] label.switching_1.8    rstudioapi_0.13        foreach_1.5.2         
-    ##  [94] farver_2.1.0           ggraph_2.0.5           digest_0.6.29         
-    ##  [97] shiny_1.7.1            Rcpp_1.0.8.2           later_1.3.0           
-    ## [100] bigparallelr_0.3.2     org.Hs.eg.db_3.14.0    httr_1.4.2            
-    ## [103] colorspace_2.0-3       rvest_1.0.2            XML_3.99-0.8          
-    ## [106] fs_1.5.2               splines_4.1.2          polysat_1.7-6         
-    ## [109] yulab.utils_0.0.4      tidytree_0.3.8         graphlayouts_0.8.0    
-    ## [112] sp_1.4-6               systemfonts_1.0.4      xtable_1.8-4          
-    ## [115] tidygraph_1.2.0        ggfun_0.0.5            R6_2.5.1              
-    ## [118] pillar_1.7.0           htmltools_0.5.2        mime_0.12             
-    ## [121] glue_1.6.2             fastmap_1.1.0          pinfsc50_1.2.0        
-    ## [124] BiocParallel_1.28.3    codetools_0.2-18       fgsea_1.20.0          
-    ## [127] utf8_1.2.2             lattice_0.20-45        GO.db_3.14.0          
-    ## [130] rmarkdown_2.11         munsell_0.5.0          DO.db_2.9             
-    ## [133] GenomeInfoDbData_1.2.7 iterators_1.0.14       haven_2.4.3           
-    ## [136] reshape2_1.4.4         gtable_0.3.0
+    ##  [55] graph_1.72.0           rngtools_1.5.2         Matrix_1.4-1          
+    ##  [58] aplot_0.1.6            zoo_1.8-10             boot_1.3-28           
+    ##  [61] reprex_2.0.1           png_0.1-7              bitops_1.0-7          
+    ##  [64] Biostrings_2.62.0      blob_1.2.3             doRNG_1.8.2           
+    ##  [67] gridGraphics_0.5-1     scales_1.2.0           lpSolve_5.6.15        
+    ##  [70] memoise_2.0.1          magrittr_2.0.3         plyr_1.8.7            
+    ##  [73] zlibbioc_1.40.0        compiler_4.1.2         scatterpie_0.1.7      
+    ##  [76] KEGGgraph_1.54.0       flock_0.7              cli_3.3.0             
+    ##  [79] XVector_0.34.0         bigsparser_0.6.1       formatR_1.12          
+    ##  [82] mgcv_1.8-40            tidyselect_1.1.2       stringi_1.7.8         
+    ##  [85] yaml_2.3.5             GOSemSim_2.20.0        locfit_1.5-9.6        
+    ##  [88] ggrepel_0.9.1          fastmatch_1.1-3        tools_4.1.2           
+    ##  [91] bigassertr_0.1.5       parallel_4.1.2         label.switching_1.8   
+    ##  [94] rstudioapi_0.13        foreach_1.5.2          farver_2.1.1          
+    ##  [97] ggraph_2.0.5           digest_0.6.29          shiny_1.7.1           
+    ## [100] Rcpp_1.0.9             later_1.3.0            bigparallelr_0.3.2    
+    ## [103] org.Hs.eg.db_3.14.0    httr_1.4.3             colorspace_2.0-3      
+    ## [106] rvest_1.0.2            XML_3.99-0.10          fs_1.5.2              
+    ## [109] splines_4.1.2          polysat_1.7-6          yulab.utils_0.0.5     
+    ## [112] tidytree_0.3.9         graphlayouts_0.8.0     sp_1.5-0              
+    ## [115] systemfonts_1.0.4      xtable_1.8-4           tidygraph_1.2.1       
+    ## [118] ggfun_0.0.6            R6_2.5.1               pillar_1.7.0          
+    ## [121] htmltools_0.5.2        mime_0.12              glue_1.6.2            
+    ## [124] fastmap_1.1.0          pinfsc50_1.2.0         BiocParallel_1.28.3   
+    ## [127] codetools_0.2-18       fgsea_1.20.0           utf8_1.2.2            
+    ## [130] lattice_0.20-45        GO.db_3.14.0           rmarkdown_2.14        
+    ## [133] munsell_0.5.0          DO.db_2.9              GenomeInfoDbData_1.2.7
+    ## [136] iterators_1.0.14       haven_2.5.0            reshape2_1.4.4        
+    ## [139] gtable_0.3.0
 
 # (1) Transcriptome Expression Analyses
 
@@ -860,11 +861,16 @@ go_enrich.v2 <- pairwise_termsim(go_enrich)
 # RES > SUS
 res.cnet <- cnetplot(go_enrich.v2, foldChange = gene_list, showCategory = 10,
     categorySize = "geneNum") + scale_color_viridis_c(option = "B",
-    guide_legend(title = "fold change")) + guides(size = guide_legend(title = "No. of genes"))
+    guide_legend(title = "fold change")) + guides(size = guide_legend(title = "No. of genes")) +
+    scale_size_continuous(breaks = c(5, 10, 15, 20, 25), limits = c(0,
+        30))
 ```
 
     ## Scale for 'colour' is already present. Adding another scale for 'colour',
     ## which will replace the existing scale.
+
+    ## Scale for 'size' is already present. Adding another scale for 'size', which
+    ## will replace the existing scale.
 
 ``` r
 res.cnet + scale_color_viridis_c(option = "B")
@@ -923,11 +929,15 @@ go_enrich_sus.2 <- pairwise_termsim(go_enrich_sus)
 # plot of network of enriched GO terms
 sus.cnet <- cnetplot(go_enrich_sus.2, foldChange = (-gene_list),
     showCategory = 10, categorySize = "geneNum") + scale_color_viridis_c(option = "B",
-    guide_legend(title = "fold change")) + guides(size = guide_legend(title = "No. of genes"))
+    guide_legend(title = "fold change")) + guides(size = guide_legend(title = "No. of genes")) +
+    scale_size_continuous(breaks = c(5, 10, 15, 20, 25), limits = c(0,
+        30))
 ```
 
     ## Scale for 'colour' is already present. Adding another scale for 'colour',
     ## which will replace the existing scale.
+    ## Scale for 'size' is already present. Adding another scale for 'size', which
+    ## will replace the existing scale.
 
 ``` r
 # plot results together
@@ -1079,10 +1089,10 @@ pca <- snpgdsPCA(genofile, num.thread=2, autosome.only = FALSE)
     ##     # of principal components: 32
     ## PCA:    the sum of all selected genotypes (0,1,2) = 6366581
     ## CPU capabilities: Double-Precision SSE2
-    ## Thu Jun 23 18:42:50 2022    (internal increment: 61056)
+    ## Fri Sep 16 13:28:59 2022    (internal increment: 61056)
     ## [..................................................]  0%, ETC: ---        [==================================================] 100%, completed, 0s
-    ## Thu Jun 23 18:42:50 2022    Begin (eigenvalues and eigenvectors)
-    ## Thu Jun 23 18:42:50 2022    Done.
+    ## Fri Sep 16 13:28:59 2022    Begin (eigenvalues and eigenvectors)
+    ## Fri Sep 16 13:28:59 2022    Done.
 
 ``` r
 pc.percent <- pca$varprop*100
@@ -2001,4 +2011,12 @@ cali_map + close_up + plot_layout(guides = "collect") + plot_annotation(tag_leve
 
 ``` r
 #ggsave("plots/map.pdf", device="pdf", height = 4, width = 8, dpi=300)
+
+cali_map
+```
+
+![](09_R_analyses_files/figure-gfm/map-2.png)<!-- -->
+
+``` r
+#ggsave("plots/calimap.pdf", device="pdf", height = 4, width = 5, dpi=300)
 ```
