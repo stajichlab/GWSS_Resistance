@@ -6,7 +6,7 @@
 
 Cassie Ettinger, & Jason Stajich. (2022). stajichlab/GWSS_Resistance: v.1 (v.1). Zenodo. https://doi.org/10.5281/zenodo.6959134
 
-<i>Manuscript coming soon</i>
+Ettinger CL, Byrne FJ, De Souza Pacheco I, Brown D, Walling LL, Atkinson PA, Redak RA & Stajich JE. 2022. Transcriptome and population structure of glassy-winged sharpshooters (Homalodisca vitripennis) with varying insecticide resistance in southern California. <i>BMC Genomics</i>. DOI: 10.1186/s12864-022-08939-1
 
 ### Abstract
 
